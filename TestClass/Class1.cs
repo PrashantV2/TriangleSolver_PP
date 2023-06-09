@@ -60,7 +60,7 @@ namespace TestClass
             string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
 
             //Assert
-            Assert.AreEqual("The triangle is valid and is an ISOSCELES", output);
+            Assert.AreEqual("The triangle is valid and is an ISOSCELES",output);
         }
 
 
@@ -78,7 +78,95 @@ namespace TestClass
             string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
 
             //Assert
-            Assert.AreEqual("The triangle is valid and is an ISOSCELES", output);
+            Assert.AreEqual("The triangle is valid and is an ISOSCELES",output);
+        }
+
+        // Test case 3 - Scalene
+        // method - Input 1 test
+        [Test]
+
+        public void Check_scalene_triangle_is_valid_test1()
+        {
+            //Arrange
+            int hypotenuse_side = 20;
+            int opposite_side = 40;
+            int adjacent_side = 30;
+
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("The triangle is valid and is a SCALENE",output);
+        }
+
+        // method - Input 2 test
+        [Test]
+
+        public void Check_scalene_triangle_is_valid_test2()
+        {
+            //Arrange
+            int hypotenuse_side = 10;
+            int opposite_side = 25;
+            int adjacent_side = 20;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("The triangle is valid and is a SCALENE",output);
+        }
+
+        // method - Input 3 test
+        [Test]
+
+        public void Check_scalene_triangle_is_valid_test3()
+        {
+            //Arrange
+            int hypotenuse_side = 18;
+            int opposite_side = 23;
+            int adjacent_side = 10;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("The triangle is valid and is a SCALENE", output);
+        }
+
+        // method - Input 2 test
+        [Test]
+
+        public void Check_scalene_triangle_is_valid_test4()
+        {
+            //Arrange
+            int hypotenuse_side = 8;
+            int opposite_side = 16;
+            int adjacent_side = 12;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("The triangle is valid and is a SCALENE",output);
+        }
+
+
+        // method - Input 5 test
+        [Test]
+
+        public void Check_scalene_triangle_is_valid_test5()
+        {
+            //Arrange
+            int hypotenuse_side = 20;
+            int opposite_side = 12;
+            int adjacent_side = 18;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("The triangle is valid and is a SCALENE", output);
         }
 
     }
