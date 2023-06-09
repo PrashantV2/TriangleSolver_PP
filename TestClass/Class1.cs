@@ -219,5 +219,57 @@ namespace TestClass
             Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
         }
 
+        // Test case 4 - Invalid Response
+        // method - Input 1 test
+        [Test]
+
+        public void Check_InvalidResponse_test1()
+        {
+            //Arrange
+            int hypotenuse_side = 2;
+            int opposite_side = 1;
+            int adjacent_side = 13;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("A triangle cannot be formed with those numbers", output);
+        }
+
+        // method - Input 2 test
+        [Test]
+
+        public void Check_InvalidResponse_test2()
+        {
+            //Arrange
+            int hypotenuse_side = 2;
+            int opposite_side = 4;
+            int adjacent_side = 1;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("A triangle cannot be formed with those numbers", output);
+        }
+
+        // method - Input 3 test
+        [Test]
+
+        public void Check_InvalidResponse_test3()
+        {
+            //Arrange
+            int hypotenuse_side = 4;
+            int opposite_side = 5;
+            int adjacent_side = 1;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("A triangle cannot be formed with those numbers", output);
+        }
+
     }
 }
