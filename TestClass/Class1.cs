@@ -131,7 +131,7 @@ namespace TestClass
             string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
 
             //Assert
-            Assert.AreEqual("The triangle is valid and is a SCALENE", output);
+            Assert.AreEqual("The triangle is valid and is a SCALENE",output);
         }
 
         // method - Input 2 test
@@ -166,7 +166,57 @@ namespace TestClass
             string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
 
             //Assert
-            Assert.AreEqual("The triangle is valid and is a SCALENE", output);
+            Assert.AreEqual("The triangle is valid and is a SCALENE",output);
+        }
+
+        // Test case 4 - Zero Length Side
+        // method - Input 1 test
+        [Test]
+
+        public void Check_zeroLengthSide_triangle_is_valid_test1()
+        {
+            //Arrange
+            int hypotenuse_side = 20;
+            int opposite_side = 0;
+            int adjacent_side = 18;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
+        }
+        // method - Input 2 test
+        [Test]
+
+        public void Check_zeroLengthSide_triangle_is_valid_test2()
+        {
+            //Arrange
+            int hypotenuse_side = 20;
+            int opposite_side = 0;
+            int adjacent_side = 0;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
+        }
+        // method - Input 3 test
+        [Test]
+
+        public void Check_zeroLengthSide_triangle_is_valid_test3()
+        {
+            //Arrange
+            int hypotenuse_side = 0;
+            int opposite_side = 0;
+            int adjacent_side = 18;
+
+            //Act
+            string output = Triangle.AnalyzeTriangle(hypotenuse_side, opposite_side, adjacent_side);
+
+            //Assert
+            Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
         }
 
     }
